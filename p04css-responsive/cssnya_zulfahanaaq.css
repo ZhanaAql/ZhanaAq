@@ -10,16 +10,15 @@
 
 }
 
-@media screen and (max-width:600px){
-  #maincontent{
+@media screen and (max-width:360px){
+  form{
     width: auto;
     float: none;
   }
-  #sidebar{
+  div{
     width: auto;
     float: none;
   }
-}
 
 h3{
     color: black;
