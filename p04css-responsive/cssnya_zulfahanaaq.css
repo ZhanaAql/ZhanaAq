@@ -21,17 +21,19 @@
     width: 70%;
   }
 
-  .keshi{
-    width: 65%;
-  }
-}
-
-.niki{
+   .niki{
   width: 50%;
   margin: auto;
   background-color: rgb(194, 238, 188);
   padding: 10px;
 }
+     
+  .keshi{
+    width: 65%;
+  }
+}
+
+
   
 
 html{
