@@ -1,6 +1,4 @@
-html{
-     flex-wrap: wrap;
-}
+
 tr th {
     flex-wrap: wrap;
 }
@@ -35,7 +33,7 @@ body {
     width: 50%;
     margin: auto;
     background-color: rgb(203, 229, 160);
-    padding: 10px;
+    padding: 2%;
 }
 
 .winter{
