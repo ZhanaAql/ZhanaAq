@@ -33,7 +33,7 @@ body {
 }
 .niki {
     width: 50%;
-    margin: 0;
+    margin: auto;
     background-color: rgb(203, 229, 160);
     padding: 10px;
 }
