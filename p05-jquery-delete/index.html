@@ -1,0 +1,130 @@
+<head>
+    <link rel="stylesheet" href="css_table.css">
+    <title>P05 fadeOut</title>
+</head>
+<body>
+    <h2>My Top 10 Best Friends</h2>
+    <h3>My Top 10 Best Friends</h3> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <div class="iwak">
+        <table border="1">
+            <thead id="endase">
+                <tr >
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="isie">
+                <tr id="row__1">
+                    <td>1</td>
+                    <td class="hana" >Lulu Lutciana Dewi</td>
+                    <td class="hana">Karanganyar</td>
+                    <td class="winter" id="winter__1">Hapus</td>
+                </tr>
+
+                <tr id="row__2">
+                    <td>2</td>
+                    <td class="hana">Imas Masrifah</td>
+                    <td class="hana">Karanganyar</td>
+                    <td class="winter" id="winter__2">Hapus</td>
+                </tr>
+
+                <tr id="row__3">
+                    <td class="hana">3</td>
+                    <td class="hana">Fatihatus Syifa Nur Fajri</td>
+                    <td class="winter">Karanganyar</td>
+                    <td class="winter" id="winter__3">Hapus</td>
+                </tr>
+
+                <tr id="row__4">
+                    <td>4</td>
+                    <td class="hana">Vira Fitria</td>
+                    <td class="hana">Serang</td>
+                    <td class="winter" id="winter__4">Hapus</td>
+                </tr>
+
+                <tr  id="row__5">
+                    <td>5</td>
+                    <td class="hana">Nazwah Fiena Faatihah</td>
+                    <td class="hana">Arjawinangun</td>
+                    <td class="winter" id="winter__5">Hapus</td>
+                </tr>
+
+                <tr id="row__6">
+                    <td>6</td>
+                    <td class="hana">Mas'amah</td>
+                    <td class="hana">Arjawinangun</td>
+                    <td class="winter" id="winter__6">Hapus</td>
+                </tr>
+
+                <tr id="row__7">
+                    <td>7</td>
+                    <td class="hana">Gina Lovita Sari</td>
+                    <td class="hana">Arjawinangun</td>
+                    <td class="winter" id="winter__7">Hapus</td>
+                </tr>
+                <tr id="row__8">
+                    <td>8</td>
+                    <td class="hana">Finky Fidianty</td>
+                    <td class="hana">Gegesik</td>
+                    <td class="winter" id="winter__8">Hapus</td>
+                </tr>
+                <tr id="row__9">
+                    <td>9</td>
+                    <td class="hana">Hana Aminatuz Zahro</td>
+                    <td class="hana">Panguragan</td>
+                    <td class="winter" id="winter__9">Hapus</td>
+                </tr>
+
+                <tr id="row__10">
+                    <td>10</td>
+                    <td class="hana">Faresha Isnaini Martadinata</td>
+                    <td class="hana">Pekalongan</td>
+                    <td class="winter" id="winter__10">Hapus</td>
+                </tr>
+                
+            </tbody>
+            </table> 
+   </div>
+    <script>
+        $(document).ready(function(){
+            //alert(0)
+            $('.hana').click(function(){
+                //alert(1)
+                let isi = $(this).text();
+                alert(isi);
+
+                let isi2= prompt('Ubah dengan:',isi);
+                if(!isi2) return;
+                alert(isi2);
+
+                $(this).text(isi2);
+            })
+            
+            $('.winter').click(function(){
+                //alert(0)
+                let yakin= confirm('Yakin mau menghapus data?');
+                if(!yakin) return;
+                let id =$(this).prop('id');
+                //alert(id);
+
+                let rid = id.split('__');
+                let baris_ke = rid[1];
+
+                //alert(baris_ke);
+
+                $('#row__'+baris_ke).fadeOut()
+                //alert('Anda yakin')
+
+            })
+        })
+
+    </script>
+<div class="ayam">
+<button><a onclick="alert('Apakah kamu ingin kembali ke Main Page?')" href="https://zhanaaql.github.io/">Kembali</a>
+</button>
+
+</div>
+</body>
