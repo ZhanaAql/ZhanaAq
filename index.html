@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman Utama</title>
+  <link rel="stylesheet" href="css_pagehana.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+     var currentSection = 0;
+       $('#konten').hide();
+       $('#utama a').click(function() {       
+      
+        $('#hana a').removeClass('aktif');
+      $(this).addClass('aktif');
+
+     var href = $(this).attr('href');
+       $('#konten>div').hide();
+       
+       $(href).show();
+            
+      if(currentSection == 0){
+          $('#konten').slideToggle();
+          currentSection = href;
+      }else if(currentSection == href){
+           $('#konten').slideToggle();
+           currentSection = 0;    
+      }else{
+          currentSection = href;
+      }
+      return false;
+  });
+});
+  </script>
+</head>
+<body>
+    <div class="menu">
+        <ul id="utama">
+            <div id="hana" class="atas">
+                <a href="#home">Home</a>
+                <a href="#profile">MyProfile</a>  
+                <a href="#tugas">Tugas</a>   
+                <a href="#contact">Contact</a>
+             
+            </div>
+        </ul>
+        
+        <div id="zulfa">
+            <div class="zha">
+                  <br>
+                  <center><marquee>SELAMAT DATANG DI WEB PORTOFOLIO SAYA</marquee></center>
+                  <br>
+             </div>
+            <div id="konten">
+                <div id="home" class="isi">
+                  <center>
+                    <br>
+                    <img src="hello!.gif" >
+                    <br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    <br>Selamat Datang di Halaman Home
+                    <p></p>
+                    <br>
+                  </center>
+                </div>
+                 <div id="profile" class="isi">
+                   <center>
+                   <br>
+                   <p>MY PROFILE</p>
+                   <img src="hana.jpeg">
+                   <br>
+                   <p>Nama : Zulfa Hana Aqliyah</p>
+                   <p>NIM : 41215476</p>
+                   <p>Prodi : Teknik Informatika</p>
+                   <br>
+                    </center>
+                </div>
+                <div id="tugas" class="isi">
+                   <center>
+                    <br><b>Challenge Qwars</b></center>
+                   <br>
+                   <div class="kotak">
+                       <a href="p03/table.html">Table Sederhana</a>
+                       <a href="p03css/index.html">Table CSS</a>
+                       <a href="p03jquery/tablejquery.html">Table Jquery</a>
+                       <a href="p03form-lv1/formlv1.html">Form-Lv1</a>
+                       <a href="p04css-basic/formlv2.html">Form-Lv2</a>
+                       <a href="p04css-responsive/index.html">Form-Responsive</a>
+                       <a href="p05-jquery-delete/index.html">JQuery FadeOut</a>
+                       <a href="p04-static-kop-surat/index.html">KOP Surat Static</a>
+                       <a href="p05-jquery-delete/index.html">JQuery Delete</a>
+                       <a href="p05-jquery-sliding/index.html">JQuery Sliding</a>
+                    </div>    
+                </div>             
+              <div id="contact" class="isi">
+                <center>Contact Saya</center>
+                       <a href="#">Email: zulfahanaaqliyah@gmail.com</a>
+                       <a href="https://www.instagram.com/zh_aqliyah/">Instagram</a>
+                       <a href="https://open.spotify.com/user/hcph51qcjeqsg0e6xfiip8rn6?si=950632f2f6304e6a">Spotify</a>
+                 </div>
+                </div>
+
+        </div>
+
+    </div>
+  </div>
+</body>
